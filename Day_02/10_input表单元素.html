@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>input 表单元素</title>
 </head>
+
 <body>
-    <form action="demo.php" method="POST" name="name1"> <!-- 要写输入必须有表单域 -->
+    <form action="demo.php" method="GET" name="name1"> <!-- 要写输入必须有表单域 -->
         <!-- value是值，表示这个框代表的值(主要对后端友好 -> 不写value后端会气炸) -->
 
         <!-- text 文本框 用户可以输入任何内容 -->
@@ -21,12 +23,25 @@
         性别: 男<input name="gender" type="radio" value="男"> 女<input name="gender" type="radio" value="女"> <br>
 
         <!-- checkbox是复选框 可以多选 -->
-        爱好: <input name="hobby" type="checkbox" value="吃饭">吃饭  <input name="hobby" type="checkbox" value="睡觉">睡觉 
+        爱好: <input name="hobby" type="checkbox" value="吃饭">吃饭 <input name="hobby" type="checkbox" value="睡觉">睡觉
         <input name="hobby" type="checkbox" value="打篮球">打篮球 <br>
 
         <!-- 单选按钮和复选框海可以设置checked 表示默认勾选 -->
-        <input type="checkbox" name="allow" value="allow" checked> 我已阅读并同意《用户须知》
+        <input type="checkbox" name="allow" value="allow" checked> 我已阅读并同意《用户须知》<br>
+
+        <!-- 点击提交按钮可以把表单域里面的内容提交给服务器 -->
+        <input type="submit" value="免费注册">
+
+        <!-- 重置按钮可以还原表单元素为初始状态 -->
+        <input type="reset" value="重置">
+
+        <!-- 普通按钮 button 结合js使用-->
+        <input type="button", value="获取短信验证码"> <br>
+
+        <!-- 文件域 在上传文件时使用 -->
+        上传头像：<input type="file" name="avatar"></input>
 
     </form>
 </body>
+
 </html>
